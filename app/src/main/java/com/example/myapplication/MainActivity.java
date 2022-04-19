@@ -15,18 +15,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button edibutton = findViewById(R.id.signin);
+        Button regisbutton = findViewById(R.id.register1);
 
-        View.OnClickListener listenerEditbutton = new View.OnClickListener() {
+        edibutton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(),MainActivity2.class);
-
-                intent.setClass(view.getContext(),MainActivity2.class);
-
                 startActivity( new Intent(view.getContext(),MainActivity2.class));
             }
-        };
-        edibutton.setOnClickListener(listenerEditbutton);
+        });
+
+        regisbutton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity( new Intent(view.getContext(),ActivityRegister.class));
+            }
+        });
+
     }
 
 }
