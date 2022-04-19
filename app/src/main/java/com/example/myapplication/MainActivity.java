@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listenerEditbutton = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(view.getContext(),MainActivity2.class);
 
                 intent.setClass(view.getContext(),MainActivity2.class);
 
-                startActivity(intent);
+                startActivity( new Intent(view.getContext(),MainActivity2.class));
             }
         };
         edibutton.setOnClickListener(listenerEditbutton);
